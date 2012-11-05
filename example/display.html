@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Display</title>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript' charset='utf-8'></script>
+	<script src='../jquery.lazypaul.js' type='text/javascript' charset='utf-8'></script>
+	<script type='text/javascript' charset='utf-8'>
+	
+		$(function() {
+
+			$( 'img.lazy' ).lazypaul( { effect : 'fadeIn' } );
+			
+			var i=6;
+			// si apre con le immagini 2,3,4,5
+			// se fai click visualizza le 6,7,8,9
+			// se fai click ancora le 2,3,4,5
+			
+			$(document).click(function(evt)
+			{
+				$( 'img.lazy' ).each( function( idx, obj ) {
+					
+					$( obj ).lazypaul( 'reset', 'img/pages/page00' + i + '.jpg' );
+					i++;
+				} );
+				if( i > 6 ) {
+					i = 2;
+				} else {
+					i = 6;
+				}
+				$( 'img.lazy' ).lazypaul( { effect: 'fadeIn' } );
+			} );
+			
+		} );
+	</script>
+</head>
+
+<body>
+<div class="scroll-pane" style="display: block; height: 400px; width: 600px; overflow: visible;">
+	<img class='lazy' src='img/grey.gif' data-original='img/pages/page002.jpg' width='1388' height='877' />
+	<br /><br />
+	<img class='lazy' src='img/grey.gif' data-original='img/pages/page003.jpg' width='1388' height='877' />
+	<br /><br />
+	<img class='lazy' src='img/grey.gif' data-original='img/pages/page004.jpg' width='1388' height='877' />
+	<br /><br />
+	<img class='lazy' src='img/grey.gif' data-original='img/pages/page005.jpg' width='1388' height='877' />
+	<br /><br />
+</div>
+
+</body>
+</html>

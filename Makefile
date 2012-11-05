@@ -1,17 +1,17 @@
-VERSION = 1.8.0
-SHELL = /bin/sh
-DOWNLOAD = /srv/www/www.appelsiini.net/shared/static/download
-JSMIN    = /home/tuupola/bin/jsmin
+VERSION = 1.8.1.1
+SHELL = /bin/bash
+DOWNLOAD = ~/Sites/GitHub/lazypaul
+JSMIN    = /usr/bin/jsmin
 
-all: lazyload minified latest
+all: lazypaul minified latest
 
-lazyload: jquery.lazyload.js
-	cp jquery.lazyload.js $(DOWNLOAD)/jquery.lazyload-$(VERSION).js
+lazypaul: jquery.lazypaul.js
+	cp jquery.lazypaul.js $(DOWNLOAD)/jquery.lazypaul-$(VERSION).js
 
-minified: jquery.lazyload.js
-	cp jquery.lazyload.min.js $(DOWNLOAD)/jquery.lazyload-$(VERSION).min.js
+minified: jquery.lazypaul.js
+	cp jquery.lazypaul.min.js $(DOWNLOAD)/jquery.lazypaul-$(VERSION).min.js
 
-latest: jquery.lazyload.js jquery.lazyload.min.js
-	cp jquery.lazyload.js $(DOWNLOAD)/jquery.lazyload.js
-	cp jquery.lazyload.min.js $(DOWNLOAD)/jquery.lazyload.min.js
+latest: jquery.lazypaul.js jquery.lazypaul.min.js
+	cp jquery.lazypaul.js $(DOWNLOAD)/jquery.lazypaul.js
+	cp jquery.lazypaul.min.js $(DOWNLOAD)/jquery.lazypaul.min.js
 

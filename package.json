@@ -1,10 +1,10 @@
 {
-    "name": "lazyload",
-    "version": "1.8.0",
-    "title": "Lazy Load",
+    "name": "lazypaul",
+    "version": "1.8.1.1",
+    "title": "LazyPaul",
     "author": {
-        "name": "Mika Tuupola",
-        "url": "http://www.appelsiini.net/"
+        "name": "Simone Conti",
+        "url": "http://www.itnok.com/"
     },
     "licenses": [
         {
@@ -19,13 +19,14 @@
     "keywords": [
         "lazy",
         "load",
-        "image"
+        "image",
+        "loader",
+        "jquery",
+        "plugin"
     ],
-    "homepage": "http://www.appelsiini.net/projects/lazyload",
+    "homepage": "http://www.itnok.com",
     "files": [
         "jquery.lazyload.js",
-        "jquery.lazyload.min.js",
-        "jquery.scrollstop.js",
-        "jquery.scrollstop.min.js"
+        "jquery.lazyload.min.js"
     ]
 }
